@@ -3,323 +3,323 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listas e Tabelas RPG</title>
     <style>
-      body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #1a1a1a;
-    color: #e0e0e0;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
 
-.container {
-    background: #2d2d2d;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
+        .container {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
 
-.list-card {
-    background: #383838;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-    vertical-align: top;
-}
+        .list-card {
+            background: #383838;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            vertical-align: top;
+        }
 
-.list-card-content {
-    margin-bottom: 10px;
-    cursor: pointer;
-}
+        .list-card-content {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
 
-.list-card:hover {
-    transform: none;
-    background: #404040;
-}
+        .list-card:hover {
+            transform: none;
+            background: #404040;
+        }
 
-.list-card h3 {
-    margin: 0 0 5px 0;
-    color: #3498db;
-}
+        .list-card h3 {
+            margin: 0 0 5px 0;
+            color: #3498db;
+        }
 
-.list-card p {
-    margin: 0;
-    font-size: 14px;
-    color: #999;
-}
+        .list-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #999;
+        }
 
-.list-card button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.2s;
-    min-width: 100px;
-}
+        .list-card button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+            min-width: 100px;
+        }
 
-.list-card button:hover {
-    background: #c0392b;
-}
+        .list-card button:hover {
+            background: #c0392b;
+        }
 
-.action-bar {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: center;
-    background: #333;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
+        .action-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
 
-.action-bar input,
-.action-bar select {
-    padding: 10px;
-    min-width: 200px;
-}
+        .action-bar input,
+        .action-bar select {
+            padding: 10px;
+            min-width: 200px;
+        }
 
-.action-bar button {
-    padding: 10px 20px;
-    font-weight: bold;
-}
+        .action-bar button {
+            padding: 10px 20px;
+            font-weight: bold;
+        }
 
-input, select {
-    padding: 8px;
-    border: 1px solid #4d4d4d;
-    border-radius: 4px;
-    font-size: 14px;
-    background: #383838;
-    color: #e0e0e0;
-}
+        input, select {
+            padding: 8px;
+            border: 1px solid #4d4d4d;
+            border-radius: 4px;
+            font-size: 14px;
+            background: #383838;
+            color: #e0e0e0;
+        }
 
-button {
-    background: #3498db;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
 
-button:hover {
-    background: #2980b9;
-}
+        button:hover {
+            background: #2980b9;
+        }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-}
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
 
-.modal-content {
-    background: #2d2d2d;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 800px;
-    max-height: 80vh;
-    overflow-y: auto;
-    color: #e0e0e0;
-}
+        .modal-content {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            color: #e0e0e0;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    border: 1px solid #4d4d4d;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            border: 1px solid #4d4d4d;
+        }
 
-th, td {
-    border: 1px solid #4d4d4d;
-    padding: 12px;
-    text-align: left;
-    background: #383838;
-}
+        th, td {
+            border: 1px solid #4d4d4d;
+            padding: 12px;
+            text-align: left;
+            background: #383838;
+        }
 
-th {
-    background: #2d2d2d;
-    position: relative;
-}
+        th {
+            background: #2d2d2d;
+            position: relative;
+        }
 
-tr.selected {
-    background-color: #4a6f8a;
-    animation: highlight 1s ease-in-out;
-}
+        tr.selected {
+            background-color: #4a6f8a;
+            animation: highlight 1s ease-in-out;
+        }
 
-.column-actions {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
+        .column-actions {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
 
-.column-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-}
+        .column-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
 
-.move-buttons {
-    display: flex;
-    gap: 5px;
-}
+        .move-buttons {
+            display: flex;
+            gap: 5px;
+        }
 
-.move-btn {
-    padding: 2px 5px;
-    font-size: 12px;
-    background: #ddd;
-}
+        .move-btn {
+            padding: 2px 5px;
+            font-size: 12px;
+            background: #ddd;
+        }
 
-.edit-column-header {
-    cursor: pointer;
-}
+        .edit-column-header {
+            cursor: pointer;
+        }
 
-.row-actions {
-    display: flex;
-    gap: 5px;
-}
+        .row-actions {
+            display: flex;
+            gap: 5px;
+        }
 
-@keyframes highlight {
-    0% { background-color: #383838; }
-    50% { background-color: #ffeb3b; }
-    100% { background-color: #4a6f8a; }
-}
+        @keyframes highlight {
+            0% { background-color: #383838; }
+            50% { background-color: #ffeb3b; }
+            100% { background-color: #4a6f8a; }
+        }
 
-.dice-roll-area {
-    margin: 20px 0;
-    padding: 15px;
-    background: #383838;
-    border-radius: 8px;
-    text-align: center;
-}
+        .dice-roll-area {
+            margin: 20px 0;
+            padding: 15px;
+            background: #383838;
+            border-radius: 8px;
+            text-align: center;
+        }
 
-.selected-item {
-    font-weight: bold;
-    color: #2980b9;
-}
+        .selected-item {
+            font-weight: bold;
+            color: #2980b9;
+        }
 
-[contenteditable="true"] {
-    padding: 5px;
-    border: 1px solid transparent;
-    transition: border-color 0.3s;
-}
+        [contenteditable="true"] {
+            padding: 5px;
+            border: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
 
-[contenteditable="true"]:hover {
-    border-color: #4d4d4d;
-    background-color: #404040;
-}
+        [contenteditable="true"]:hover {
+            border-color: #4d4d4d;
+            background-color: #404040;
+        }
 
-[contenteditable="true"]:focus {
-    border-color: #3498db;
-    background-color: #454545;
-    outline: none;
-}
+        [contenteditable="true"]:focus {
+            border-color: #3498db;
+            background-color: #454545;
+            outline: none;
+        }
 
-.column-roll-button {
-    padding: 2px 5px;
-    font-size: 12px;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 5px;
-}
+        .column-roll-button {
+            padding: 2px 5px;
+            font-size: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
 
-.column-roll-button:hover {
-    background: #2980b9;
-}
+        .column-roll-button:hover {
+            background: #2980b9;
+        }
+        
+        #simpleList {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
 
-#simpleList {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
+        #simpleList .list-card {
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: 10px 15px;
+        }
 
-#simpleList .list-card {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 10px 15px;
-}
+        #simpleList .list-card span {
+            flex: 1;
+            text-align: left;
+        }
 
-#simpleList .list-card span {
-    flex: 1;
-    text-align: left;
-}
+        #simpleList .row-actions {
+            display: flex;
+            gap: 5px;
+        }
 
-#simpleList .row-actions {
-    display: flex;
-    gap: 5px;
-}
+        .folder-card, .folder-content, .folder-card h2, .folder-content.collapsed {
+            display: none;
+        }
 
-.folder-card, .folder-content, .folder-card h2, .folder-content.collapsed {
-    display: none;
-}
+        .list-dropdown {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background: #2d2d2d;
+            width: 100%;
+        }
 
-.list-dropdown {
-    margin-bottom: 15px;
-    border-radius: 8px;
-    background: #2d2d2d;
-    width: 100%;
-}
+        .dropdown-header {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #383838;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
 
-.dropdown-header {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: #383838;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
+        .dropdown-header:hover {
+            background: #404040;
+        }
 
-.dropdown-header:hover {
-    background: #404040;
-}
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            background: #333;
+            border-radius: 0 0 8px 8px;
+        }
 
-.dropdown-content {
-    display: none;
-    padding: 10px;
-    background: #333;
-    border-radius: 0 0 8px 8px;
-}
+        .dropdown-content.show {
+            display: block;
+        }
 
-.dropdown-content.show {
-    display: block;
-}
+        .list-actions {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
 
-.list-actions {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-}
-
-.list-actions select,
-.list-actions button {
-    padding: 5px 10px;
-    font-size: 14px;
-}
+        .list-actions select,
+        .list-actions button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
     </style>
-    </head>
+</head>
 <body>
     <div class="container">
         <h1>Minhas Listas RPG</h1>
@@ -354,96 +354,112 @@ tr.selected {
         </div>
     </div>
 
-<script>
-let lists = [];
+<script>let lists = [];
 let currentList = null;
-let menuCategories = [
-    {id: 1, name: "Listas Simples", type: "simple"},
-    {id: 2, name: "Tabelas", type: "table"}
-];
-
+let menuCategories = [{
+  id: 1,
+  name: "Listas Simples",
+  type: "simple"
+}, {
+  id: 2,
+  name: "Tabelas",
+  type: "table"
+}];
+function saveToLocalStorage() {
+  localStorage.setItem('rpgLists', JSON.stringify({
+    lists: lists,
+    menuCategories: menuCategories
+  }));
+}
+function loadFromLocalStorage() {
+  const saved = localStorage.getItem('rpgLists');
+  if (saved) {
+    const data = JSON.parse(saved);
+    lists = data.lists || [];
+    menuCategories = data.menuCategories || [{
+      id: 1,
+      name: "Listas Simples",
+      type: "simple"
+    }, {
+      id: 2,
+      name: "Tabelas",
+      type: "table"
+    }];
+  }
+  updateListDisplay();
+}
 function addNewMenu() {
-    const menuName = prompt("Digite o nome do novo menu:");
-    if (!menuName) return;
-    
-    menuCategories.push({
-        id: Date.now(),
-        name: menuName,
-        type: 'custom'
-    });
-    updateListDisplay();
+  const menuName = prompt("Digite o nome do novo menu:");
+  if (!menuName) return;
+  menuCategories.push({
+    id: Date.now(),
+    name: menuName,
+    type: 'custom'
+  });
+  saveToLocalStorage();
+  updateListDisplay();
 }
-
 function editMenuName(menuId, event) {
-    if (event) {
-        event.stopPropagation();
-    }
-    const menu = menuCategories.find(m => m.id === menuId);
-    if (!menu) return;
-    
-    const newName = prompt("Digite o novo nome do menu:", menu.name);
-    if (!newName || newName === menu.name) return;
-    
-    menu.name = newName;
-    updateListDisplay();
+  if (event) {
+    event.stopPropagation();
+  }
+  const menu = menuCategories.find(m => m.id === menuId);
+  if (!menu) return;
+  const newName = prompt("Digite o novo nome do menu:", menu.name);
+  if (!newName || newName === menu.name) return;
+  menu.name = newName;
+  saveToLocalStorage();
+  updateListDisplay();
 }
-
 function moveListToMenu(listId, menuId) {
-    const list = lists.find(l => l.id === listId);
-    if (!list) return;
-    
-    list.menuId = menuId ? Number(menuId) : null;
-    updateListDisplay();
+  const list = lists.find(l => l.id === listId);
+  if (!list) return;
+  list.menuId = menuId ? Number(menuId) : null;
+  saveToLocalStorage();
+  updateListDisplay();
 }
-
 function createNewList() {
-    const name = document.getElementById('listName').value;
-    const type = document.getElementById('listType').value;
-    if (!name) return;
-    
-    const list = {
-        id: Date.now(),
-        name: name,
-        type: type,
-        items: [],
-        columns: type === 'table' ? ['Item'] : null,
-        menuId: null 
-    };
-    
-    lists.push(list);
-    updateListDisplay();
-    document.getElementById('listName').value = '';
+  const name = document.getElementById('listName').value;
+  const type = document.getElementById('listType').value;
+  if (!name) return;
+  const list = {
+    id: Date.now(),
+    name: name,
+    type: type,
+    items: [],
+    columns: type === 'table' ? ['Item'] : null,
+    menuId: null
+  };
+  lists.push(list);
+  saveToLocalStorage();
+  updateListDisplay();
+  document.getElementById('listName').value = '';
 }
-
 function updateListDisplay() {
-    const container = document.getElementById('listContainer');
-    
-    if (lists.length === 0) {
-        container.innerHTML = `
+  const container = document.getElementById('listContainer');
+  if (lists.length === 0) {
+    container.innerHTML = `
             <div style="text-align: center; padding: 40px; color: #666;">
                 <h3>Nenhuma lista criada</h3>
                 <p>Crie uma nova lista usando o formulário acima</p>
             </div>
         `;
-        return;
-    }
-
-    let html = `
+    return;
+  }
+  let html = `
         <div class="action-bar" style="margin-bottom: 20px;">
             <button onclick="addNewMenu()">Novo Menu</button>
         </div>
     `;
-
-    menuCategories.forEach(menu => {
-        const menuLists = lists.filter(l => {
-            if (menu.type === 'custom') {
-                return l.menuId === menu.id;
-            } else {
-                return l.menuId === null && l.type === menu.type;
-            }
-        });
-
-        html += `
+  menuCategories.forEach(menu => {
+    const menuLists = lists.filter(l => {
+      if (menu.type === 'custom') {
+        return l.menuId === menu.id;
+      } else {
+        return l.menuId === null && l.type === menu.type;
+      }
+    });
+    html += `
             <div class="list-dropdown">
                 <div class="dropdown-header" onclick="toggleDropdown('menu-${menu.id}')">
                     <span style="flex: 1;">${menu.name} (${menuLists.length})</span>
@@ -470,11 +486,9 @@ function updateListDisplay() {
                                 <select onchange="moveListToMenu(${list.id}, this.value)" 
                                         onclick="event.stopPropagation()">
                                     <option value="">Mover para...</option>
-                                    ${menuCategories.map(m => 
-                                        `<option value="${m.id}" ${list.menuId === m.id ? 'selected' : ''}>
+                                    ${menuCategories.map(m => `<option value="${m.id}" ${list.menuId === m.id ? 'selected' : ''}>
                                             ${m.name}
-                                        </option>`
-                                    ).join('')}
+                                        </option>`).join('')}
                                 </select>
                                 <button onclick="editListName(${list.id}, event)">Editar Nome</button>
                                 <button onclick="openList(${list.id})">Abrir</button>
@@ -485,35 +499,33 @@ function updateListDisplay() {
                 </div>
             </div>
         `;
-    });
-
-    container.innerHTML = html;
+  });
+  container.innerHTML = html;
 }
-
 function moveItem(index, direction) {
   if (direction === -1 && index === 0 || direction === 1 && index === currentList.items.length - 1) {
     return;
   }
   const newIndex = index + direction;
   [currentList.items[index], currentList.items[newIndex]] = [currentList.items[newIndex], currentList.items[index]];
+  saveToLocalStorage();
   updateListContent();
 }
-
 function moveColumn(index, direction) {
   if (direction === -1 && index === 0 || direction === 1 && index === currentList.columns.length - 1) {
     return;
   }
   const newIndex = index + direction;
   [currentList.columns[index], currentList.columns[newIndex]] = [currentList.columns[newIndex], currentList.columns[index]];
-  currentList.items.forEach(item => {
+  currentList.items.forEach((item, i) => {
     const values = currentList.columns.map(col => item[col]);
     currentList.columns.forEach((col, i) => {
       item[col] = values[i];
     });
   });
+  saveToLocalStorage();
   updateListContent();
 }
-
 function editColumnHeader(index) {
   const newHeader = prompt('Digite o novo nome da coluna:', currentList.columns[index]);
   if (!newHeader || newHeader === currentList.columns[index]) return;
@@ -522,9 +534,9 @@ function editColumnHeader(index) {
     delete item[currentList.columns[index]];
   });
   currentList.columns[index] = newHeader;
+  saveToLocalStorage();
   updateListContent();
 }
-
 function updateListContent() {
   const content = document.getElementById('listContent');
   if (currentList.type === 'simple') {
@@ -584,7 +596,6 @@ function updateListContent() {
         `;
   }
 }
-
 function openList(id) {
   currentList = lists.find(l => l.id === id);
   const modal = document.getElementById('listModal');
@@ -607,7 +618,6 @@ function openList(id) {
   updateListContent();
   modal.style.display = 'flex';
 }
-
 function addItem() {
   const itemInput = document.getElementById('itemInput');
   const name = itemInput.value;
@@ -624,9 +634,9 @@ function addItem() {
     currentList.items.push(item);
   }
   itemInput.value = '';
+  saveToLocalStorage();
   updateListContent();
 }
-
 function addColumn() {
   const columnName = document.getElementById('columnName').value;
   if (!columnName || currentList.columns.includes(columnName)) return;
@@ -635,9 +645,9 @@ function addColumn() {
     item[columnName] = '';
   });
   document.getElementById('columnName').value = '';
+  saveToLocalStorage();
   updateListContent();
 }
-
 function rollRandomItem() {
   if (!currentList.items.length) {
     document.getElementById('rollResult').textContent = 'A lista está vazia!';
@@ -662,26 +672,24 @@ function rollRandomItem() {
     });
   }
 }
-
 function removeItem(index) {
   currentList.items.splice(index, 1);
+  saveToLocalStorage();
   updateListContent();
 }
-
 function deleteList(id) {
   lists = lists.filter(l => l.id !== id);
+  saveToLocalStorage();
   updateListDisplay();
 }
-
 function closeModal() {
   document.getElementById('listModal').style.display = 'none';
   currentList = null;
 }
-
 function updateCellContent(rowIndex, column, content) {
   currentList.items[rowIndex][column] = content;
+  saveToLocalStorage();
 }
-
 function rollColumnItems(columnIndex) {
   if (!currentList.items.length) {
     document.getElementById('rollResult').textContent = 'A lista está vazia!';
@@ -707,7 +715,6 @@ function rollColumnItems(columnIndex) {
     });
   }
 }
-
 function editListName(listId, event) {
   if (event) {
     event.stopPropagation();
@@ -716,22 +723,20 @@ function editListName(listId, event) {
   const newName = prompt('Digite o novo nome:', list.name);
   if (!newName || newName === list.name) return;
   list.name = newName;
+  saveToLocalStorage();
   updateListDisplay();
 }
-
 function toggleDropdown(id) {
   const content = document.getElementById(id);
   if (!content) return;
-  
   const allDropdowns = document.querySelectorAll('.dropdown-content');
   allDropdowns.forEach(dropdown => {
     if (dropdown.id !== id && dropdown.classList.contains('show')) {
       dropdown.classList.remove('show');
     }
   });
-  
   content.classList.toggle('show');
 }
-</script>
+document.addEventListener('DOMContentLoaded', loadFromLocalStorage);</script>
 </body>
 </html>
